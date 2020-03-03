@@ -9,12 +9,12 @@ jobs:
       - name: Set up Git repository
         uses: actions/checkout@v1
       - name: Compile LaTeX document to dvi
-        uses: dante-ev/latex-action@master
+        uses: xu-cheng/latex-action@master
         with:
           root_file: main.tex
           compiler: uplatex
       - name: Compile dvi to pdf
-        uses: dante-ev/latex-action@master
+        uses: xu-cheng/latex-action@master
         with:
           root_file: main.dvi
           compiler: dvipdfmx
