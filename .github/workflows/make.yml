@@ -11,9 +11,9 @@ jobs:
       - name: make LaTeX document
         uses: dante-ev/latex-action@master
         with:
-          root_file: ~
+          root_file: all
           compiler: make
-          args: all
+          args: ~
       - name: Upload output pdf
         uses: actions/upload-artifact@v1
         with:
