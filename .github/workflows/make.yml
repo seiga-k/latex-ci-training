@@ -11,7 +11,7 @@ jobs:
       - name: make LaTeX document
         uses: dante-ev/latex-action@master
         with:
-          root_file: ""
+          root_file: ~
           compiler: make
           args: all
           extra_system_packages: make
