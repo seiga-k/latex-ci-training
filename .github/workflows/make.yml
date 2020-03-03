@@ -20,3 +20,8 @@ jobs:
           root_file: main.dvi
           compiler: dvipdfmx
           args: ""
+      - name: Upload output pdf
+        uses: actions/upload-artifact@v1
+        with:
+          name: output
+          path: main.pdf
