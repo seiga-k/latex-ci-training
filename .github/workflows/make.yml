@@ -14,6 +14,7 @@ jobs:
           root_file: main.tex
           compiler: make
           args: ""
+          extra_system_packages: make
       - name: Upload output pdf
         uses: actions/upload-artifact@v1
         with:
