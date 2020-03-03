@@ -13,8 +13,10 @@ jobs:
         with:
           root_file: main.tex
           compiler: uplatex
+          args: ""
       - name: Compile dvi to pdf
         uses: xu-cheng/latex-action@master
         with:
           root_file: main.dvi
           compiler: dvipdfmx
+          args: ""
