@@ -1,0 +1,9 @@
+*.vscode
+*.swp
+*~
+*.dvi
+*.aux
+*.pdf
+*.log
+*.bbl
+*.blg
