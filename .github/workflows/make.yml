@@ -9,11 +9,11 @@ jobs:
       - name: Set up Git repository
         uses: actions/checkout@v1
       - name: make LaTeX document
-        uses: xu-cheng/latex-action@master
+        uses: dante-ev/latex-action@master
         with:
-          root_file: all
+          root_file: ""
           compiler: make
-          args: ""
+          args: all
           extra_system_packages: make
       - name: Upload output pdf
         uses: actions/upload-artifact@v1
