@@ -1,6 +1,6 @@
 name: CI
 
-on: [push]
+on: [pull_request]
 
 jobs:
   build:
@@ -8,8 +8,14 @@ jobs:
     steps:
       - name: Set up Git repository
         uses: actions/checkout@v1
-      - name: Compile LaTeX document
+      - name: make LaTeX document
         uses: dante-ev/latex-action@master
         with:
-          root_file: main.tex
-          compiler: uplatex
+          root_file: all
+          compiler: make
+          args: ~
+      - name: Upload output pdf
+        uses: actions/upload-artifact@v1
+        with:
+          name: output
+          path: main.pdf
